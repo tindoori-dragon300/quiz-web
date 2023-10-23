@@ -1,0 +1,281 @@
+.App {
+  margin-top: 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.App div,
+.App img {
+  padding: 20px;
+  margin: 10px;
+}
+
+.App div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.App div p {
+  text-align: left;
+}
+
+.App div button,
+.footer button {
+  font-size: 20px;
+  background-color: #94E4B4;
+  padding: 10px;
+  width: 200px;
+  color: aliceblue;
+  border-color: #94E4B4;
+}
+
+.quizProcess {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.quiz-container {
+  /* change requires in smaller mobile devices */
+  display: grid;
+  grid-template-rows: 1fr 6fr 2fr;
+  height: 100vh;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer button {
+  height: 40px;
+}
+
+.skip_text {
+  margin-left: 10px;
+  color: #94E4B4;
+  font-size: 20px;
+}
+
+.question {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.question_section {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.question_text_div {
+  display: flex;
+  width: 100vw;
+  height: 30vh;
+  background-color: #94E4B4;
+  align-items: center;
+
+}
+
+.question_text {
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: 39.01px;
+  word-wrap: break-word
+}
+
+.options {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+
+}
+
+.option_container img {
+  border-radius: 10%;
+}
+
+.option_container:hover {
+  box-shadow: 0 0 10px #94E4B4;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+
+.option_container.active {
+  transform: scale(1.1);
+  /* Scale up by 10% */
+  box-shadow: 0 0 10px #31e231;
+  /* Add a green glow effect */
+}
+
+
+.options img {
+  width: 100%;
+
+}
+
+.op_text {
+  background-color: #D1D1D1;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 18vw;
+  height: 10vh;
+  font-size: small;
+}
+
+.result_container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  font-size: large;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.tindoori_logo {
+  width: 8vw;
+  border: 1px solid;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #94E4B4;
+
+}
+
+.result_container a {
+  margin:10px;
+  font-size: 12px;
+}
+
+.result_container p {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.result_circle {
+  /* styles for the first image (circle) */
+  width: 50vw;
+  animation: rotate 5s linear infinite;
+  ;
+
+}
+
+.centered_image {
+  /* styles for the second image */
+  width: 25vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 35%;
+
+  /* Adjust width and height as needed */
+}
+
+.circle_container {
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  position: relative;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width:500px) {
+  .App {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .App div button {
+    background-color: #94E4B4;
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .option_container {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .option_container:hover {
+    box-shadow: 0 0 10px #94E4B4;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: scale(1.1);
+  }
+
+  .option_container.active {
+    transform: scale(1.1);
+    /* Scale up by 10% */
+    box-shadow: 0 0 10px #31e231;
+    /* Add a green glow effect */
+  }
+
+  .option_container img {
+    border-top-right-radius: 10%;
+    width: 50%;
+  }
+
+  .op_text {
+    background-color: #D1D1D1;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 40%;
+    font-size: small;
+  }
+
+
+  .footer button {
+    font-size: 20px;
+    background-color: #94E4B4;
+    padding: 10px;
+    width: 150px;
+    color: aliceblue;
+    border-color: #94E4B4;
+    margin: 10px;
+
+  }
+
+
+}
