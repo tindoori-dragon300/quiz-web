@@ -25,8 +25,7 @@
 .footer button {
   font-size: 20px;
   background-color: #94E4B4;
-  padding: 10px;
-  width: 200px;
+  width: 130px;
   color: aliceblue;
   border-color: #94E4B4;
 }
@@ -160,7 +159,7 @@
 }
 
 .result_container a {
-  margin:10px;
+  margin: 10px;
   font-size: 12px;
 }
 
@@ -269,10 +268,10 @@
   .footer button {
     font-size: 20px;
     background-color: #94E4B4;
-    padding: 10px;
-    width: 150px;
+    width: auto;
     color: aliceblue;
     border-color: #94E4B4;
+    border-radius: 20%;
     margin: 10px;
 
   }
